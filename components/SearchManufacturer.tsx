@@ -8,8 +8,8 @@ import Image from "next/image";
 import { useState, Fragment } from "react";
 
 const SearchManufacturer = ({
-  manufacturer,
-  setManufacturer,
+  selected,
+  setSelected,
 }: SearchManufacturerProps) => {
   const [query, setQuery] = useState("");
 
@@ -26,8 +26,8 @@ const SearchManufacturer = ({
   return (
     <div className="search-manufacturer">
       <Combobox
-        value={manufacturer}
-        onChange={setManufacturer}
+        value={selected}
+        onChange={setSelected}
       >
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
